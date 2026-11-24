@@ -34,7 +34,8 @@ class MuJoCoRuntime:
     name = "MuJoCo + dual SO-ARM100"
     connected = True
 
-    def __init__(self, items: list[Item] | None = None, width: int = 640, height: int = 480):
+    def __init__(self, items: list[Item] | None = None,
+                 width: int | None = None, height: int | None = None):
         import mujoco
 
         self.mj = mujoco
@@ -42,7 +43,11 @@ class MuJoCoRuntime:
         self.model = mujoco.MjModel.from_xml_string(build_mjcf(self.items))
         self.data = mujoco.MjData(self.model)
         self._renderer = None
-        self._wh = (width, height)
+        # Each rendered frame costs real memory, and a small free-tier host has
+        # very little of it. COACT_CAM_W/H let a deployment trade resolution for
+        # headroom without touching the code.
+        self._wh = (int(os.getenv("COACT_CAM_W", width or 640)),
+                    int(os.getenv("COACT_CAM_H", height or 480)))
         self.frames: list[np.ndarray] = []
 
         self.arm_dofs = {

@@ -298,23 +298,33 @@ is not true.
 
 ## Deployment
 
-There are two things worth hosting, and they have different requirements.
+Two pieces with very different needs, so they deploy separately.
 
-**The dashboard, as a static page.** `docs/` holds a self-contained copy — the page, the
-two-camera figure and the recorded episode. GitHub Pages serves it from there with no build step
-and no backend: the gate logic runs in the browser against a geometric model of the same table,
-and the page says so. This is what the live demo link above points at.
+**The dashboard — static, free, always up.** `docs/` holds a self-contained copy: the page, the
+two-camera figure and the recorded episode. It needs no backend; the gate logic runs in the browser
+against a geometric model of the same table, and the page labels itself as standalone.
+`scripts/build_docs.py` regenerates it, so `docs/` stays a build output rather than a second source.
+Serve it from GitHub Pages (`main` / `/docs`) or as a Render static site — `render.yaml` defines
+both services.
 
-**The full system, with live cameras.** This needs MuJoCo rendering through EGL, so it has to be a
-container — a plain Python buildpack has no way to install the GL libraries. The `Dockerfile`
-handles it, defaults to port 7860 for Hugging Face Spaces, and honours `$PORT` for Render, Fly or
-Cloud Run. It also renders one frame at build time and fails the build if EGL comes back blank,
-rather than shipping an image that quietly serves the no-physics fallback.
-`deploy/README-huggingface.md` is the Space front matter.
+**The full system — live cameras, container required.** MuJoCo renders through EGL, which needs GL
+libraries a plain Python buildpack cannot install, so this runs from the `Dockerfile`. It defaults
+to port 7860 for Hugging Face Spaces and honours `$PORT` for Render, Fly and Cloud Run. The build
+renders one frame and fails if EGL comes back blank, rather than shipping an image that quietly
+serves the no-physics fallback.
 
-`render.yaml` and `Procfile` remain for a non-Docker deploy; that path runs without physics and the
-dashboard reports it. Health check is `GET /api/health`, which states plainly which services are
-actually connected.
+Memory is the real constraint: MuJoCo's EGL context, the OpenVINO runtime and OpenCV together sit
+close to a 512 MB free tier. `COACT_CAM_W` / `COACT_CAM_H` trade camera resolution for headroom,
+and the detector scales its area thresholds with the frame, so grounding is unchanged — verified
+identical from 640×480 down to 320×240.
+
+**Connecting the two.** The static page accepts `?api=https://your-backend` to point itself at a
+live backend, remembers the choice, and falls back to standalone after a few seconds if the backend
+is asleep or gone. A free-tier service that has spun down takes close to a minute to wake, and a
+working standalone demo beats a spinner.
+
+Health check is `GET /api/health`, which states which services are actually connected rather than
+asserting that they are.
 
 ---
 

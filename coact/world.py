@@ -114,6 +114,11 @@ _BUILDERS = {"plate": _plate, "cup": _cup, "bowl": _bowl, "carafe": _carafe}
 def build_mjcf(items: list[Item], asset_dir: Path | str = ASSET_DIR) -> str:
     """Return a complete MJCF string for a table laid out with `items`."""
     asset_dir = Path(asset_dir)
+    # The offscreen framebuffer has to be at least as large as the biggest frame
+    # anything will ask for, and it is allocated up front — so it is sized from
+    # the same env vars the renderer uses rather than being fixed at 1280x960.
+    offw = max(int(os.getenv("COACT_CAM_W", 640)), 640)
+    offh = max(int(os.getenv("COACT_CAM_H", 480)), 480)
     arm_xml = (asset_dir / "so_arm100.xml").as_posix()
     bodies = "".join(_BUILDERS[i.label](i) for i in items)
 
@@ -123,7 +128,7 @@ def build_mjcf(items: list[Item], asset_dir: Path | str = ASSET_DIR) -> str:
   <visual>
     <headlight diffuse="0.55 0.55 0.55" ambient="0.42 0.42 0.42" specular="0.1 0.1 0.1"/>
     <quality shadowsize="2048"/>
-    <global offwidth="1280" offheight="960"/>
+    <global offwidth="{offw}" offheight="{offh}"/>
   </visual>
 
   <asset>

@@ -23,8 +23,18 @@ import cv2
 import numpy as np
 
 # Table surface is a mid-brown; plates are off-white; cups are saturated.
-MIN_AREA = 420          # px, rejects speckle and distant clutter
-MAX_AREA = 90_000       # px, rejects the table itself
+# Area thresholds, expressed at the reference resolution below and scaled to
+# whatever the camera actually renders. Absolute pixel counts would silently
+# break the detector on a smaller frame — halve the resolution and every blob
+# falls under the floor.
+REF_W, REF_H = 640, 480
+MIN_AREA = 420          # px at REF_W x REF_H; rejects speckle and distant clutter
+MAX_AREA = 90_000       # px at REF_W x REF_H; rejects the table itself
+
+
+def _area_bounds(shape) -> tuple[float, float]:
+    scale = (shape[0] * shape[1]) / float(REF_W * REF_H)
+    return MIN_AREA * scale, MAX_AREA * scale
 
 
 @dataclass
@@ -68,8 +78,9 @@ def _masks(bgr: np.ndarray) -> dict[str, np.ndarray]:
 
 
 def _contours(mask: np.ndarray) -> list[np.ndarray]:
+    lo, hi = _area_bounds(mask.shape)
     cnts, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-    return [c for c in cnts if MIN_AREA < cv2.contourArea(c) < MAX_AREA]
+    return [c for c in cnts if lo < cv2.contourArea(c) < hi]
 
 
 def _is_plate(c: np.ndarray) -> bool:
@@ -88,11 +99,11 @@ def _is_plate(c: np.ndarray) -> bool:
     return solidity > 0.68 and 0.60 < aspect < 5.5 and fill > 0.48
 
 
-def _is_cup(c: np.ndarray) -> bool:
+def _is_cup(c: np.ndarray, shape) -> bool:
     x, y, w, h = cv2.boundingRect(c)
     aspect = w / max(h, 1)
     area = cv2.contourArea(c)
-    return 0.35 < aspect < 2.2 and area > MIN_AREA
+    return 0.35 < aspect < 2.2 and area > _area_bounds(shape)[0]
 
 
 def detect(rgb: np.ndarray) -> list[Detection]:
@@ -107,7 +118,7 @@ def detect(rgb: np.ndarray) -> list[Detection]:
             raw.append(("plate", "white", c))
     for color in ("red", "blue", "green"):
         for c in _contours(masks[color]):
-            if _is_cup(c):
+            if _is_cup(c, bgr.shape):
                 raw.append(("cup", color, c))
 
     dets: list[Detection] = []

@@ -1,19 +1,52 @@
+# Two services, because they have very different needs.
+#
+# coact-demo  — the dashboard as a static site. Free, no cold start, nothing to
+#               keep alive. The gate logic runs in the browser against a
+#               geometric model of the same table and the page says so. This is
+#               the one to hand to a reviewer.
+#
+# coact-api   — the full system: MuJoCo physics and both agent cameras rendered
+#               through EGL. This needs a container, because Render's Python
+#               runtime cannot install the GL libraries. It is memory-hungry:
+#               see the note on the instance type below.
+#
+# The static site can point itself at the API by appending
+#   ?api=https://coact-api.onrender.com
+# to its URL. It remembers the choice, and drops back to standalone if the
+# backend is asleep or missing.
+
 services:
   - type: web
-    name: coact
-    runtime: python
+    name: coact-demo
+    runtime: static
+    staticPublishPath: ./docs
+    buildCommand: ""
+    pullRequestPreviewsEnabled: false
+    headers:
+      - path: /*
+        name: Cache-Control
+        value: public, max-age=300
+
+  - type: web
+    name: coact-api
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    # The free instance gives 512 MB. MuJoCo's EGL context, OpenVINO's runtime
+    # and OpenCV together sit close to that line, so the free tier may be killed
+    # on the first camera render. The small cameras below are what make it
+    # plausible at all; move to a paid instance if it restarts under load.
     plan: free
-    buildCommand: |
-      apt-get update -y && apt-get install -y libegl1 libgl1 libglib2.0-0 || true
-      pip install -r requirements.txt
-    startCommand: uvicorn coact.server:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /api/health
     envVars:
-      - key: PYTHON_VERSION
-        value: "3.11"
       - key: MUJOCO_GL
         value: egl
       - key: COACT_OV_DEVICE
         value: AUTO
+      # Smaller frames, far less memory. The detector scales its thresholds with
+      # the frame, so grounding is unaffected.
+      - key: COACT_CAM_W
+        value: "400"
+      - key: COACT_CAM_H
+        value: "300"
       - key: SPEECHMATICS_API_KEY
         sync: false

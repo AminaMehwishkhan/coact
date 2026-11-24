@@ -278,8 +278,22 @@ footer{padding:16px 20px 28px;color:var(--dimmer);font-size:12px;border-top:1px 
                    shown are the recorded results, not live ones.
    ========================================================================== */
 
-const API = location.protocol.startsWith('http') && location.hostname
-  ? (localStorage.getItem('coact_api') || location.origin) : '';
+// Where to look for the backend. The static page and the physics service are
+// deployed separately (a static host cannot run MuJoCo), so the page accepts
+// ?api=https://... to point itself at a live backend and remembers it. Without
+// one it checks its own origin, and falling back to standalone is normal.
+const API = (() => {
+  if (!location.protocol.startsWith('http') || !location.hostname) return '';
+  const q = new URLSearchParams(location.search).get('api');
+  if (q !== null) {
+    const clean = q.replace(/\/+$/, '');
+    try { clean ? localStorage.setItem('coact_api', clean)
+                : localStorage.removeItem('coact_api'); } catch (e) {}
+    return clean || location.origin;
+  }
+  try { return localStorage.getItem('coact_api') || location.origin; }
+  catch (e) { return location.origin; }
+})();
 let BACKEND = false;
 
 /* ---------------- standalone geometric model of the same table ------------- */
@@ -771,7 +785,17 @@ async function loadVideo(){
 const pill=(n,on,d)=>`<span class="pill ${on?'on':'off'}" title="${d}"><i class="dot"></i>${n}</span>`;
 async function boot(){
   let health=null;
-  try{ const r=await fetch(API+'/api/health',{cache:'no-store'}); if(r.ok) health=await r.json(); }catch(e){}
+  // A free-tier backend that has spun down can take the better part of a
+  // minute to wake. Waiting that long on first paint would leave the page
+  // looking broken, so the probe is given a few seconds and then standalone
+  // takes over — which is a working demo, not an error state.
+  try{
+    const ctrl=new AbortController();
+    const bail=setTimeout(()=>ctrl.abort(), 6000);
+    const r=await fetch(API+'/api/health',{cache:'no-store',signal:ctrl.signal});
+    clearTimeout(bail);
+    if(r.ok) health=await r.json();
+  }catch(e){}
   BACKEND=!!health;
   const sv=$('services');
 
