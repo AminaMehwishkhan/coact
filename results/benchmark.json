@@ -1,0 +1,3600 @@
+{
+  "meta": {
+    "trials": 90,
+    "seed": 7,
+    "elapsed_s": 48.9,
+    "agree_tolerance_m": 0.05,
+    "confidence_floor": 0.55,
+    "ambiguous_instructions": 45,
+    "unambiguous_instructions": 45,
+    "conditions": [
+      "clean",
+      "depth_skew",
+      "occluded"
+    ],
+    "sizing": "metric"
+  },
+  "single_agent": {
+    "correct_commit_pct": 56.7,
+    "unsafe_commit_pct": 30.0,
+    "block_pct": 13.3,
+    "unsafe_commits": 27,
+    "description": "One camera grounds the instruction and commits. No gate."
+  },
+  "confidence_gate": {
+    "description": "One camera, blocking when its own confidence < tau.",
+    "matched_to_coact_block_rate": {
+      "correct_commit_pct": 38.9,
+      "unsafe_commit_pct": 5.6,
+      "block_pct": 55.6,
+      "unsafe_commits": 5,
+      "tau": 0.961
+    },
+    "best_achievable_safety": {
+      "correct_commit_pct": 36.7,
+      "unsafe_commit_pct": 0.0,
+      "block_pct": 63.3,
+      "unsafe_commits": 0,
+      "tau": 0.982
+    },
+    "sweep": [
+      {
+        "correct_commit_pct": 56.7,
+        "unsafe_commit_pct": 30.0,
+        "block_pct": 13.3,
+        "unsafe_commits": 27,
+        "tau": 0.0
+      },
+      {
+        "correct_commit_pct": 56.7,
+        "unsafe_commit_pct": 30.0,
+        "block_pct": 13.3,
+        "unsafe_commits": 27,
+        "tau": 0.806
+      },
+      {
+        "correct_commit_pct": 56.7,
+        "unsafe_commit_pct": 27.8,
+        "block_pct": 15.6,
+        "unsafe_commits": 25,
+        "tau": 0.807
+      },
+      {
+        "correct_commit_pct": 55.6,
+        "unsafe_commit_pct": 27.8,
+        "block_pct": 16.7,
+        "unsafe_commits": 25,
+        "tau": 0.808
+      },
+      {
+        "correct_commit_pct": 54.4,
+        "unsafe_commit_pct": 27.8,
+        "block_pct": 17.8,
+        "unsafe_commits": 25,
+        "tau": 0.81
+      },
+      {
+        "correct_commit_pct": 53.3,
+        "unsafe_commit_pct": 27.8,
+        "block_pct": 18.9,
+        "unsafe_commits": 25,
+        "tau": 0.811
+      },
+      {
+        "correct_commit_pct": 52.2,
+        "unsafe_commit_pct": 26.7,
+        "block_pct": 21.1,
+        "unsafe_commits": 24,
+        "tau": 0.812
+      },
+      {
+        "correct_commit_pct": 52.2,
+        "unsafe_commit_pct": 25.6,
+        "block_pct": 22.2,
+        "unsafe_commits": 23,
+        "tau": 0.813
+      },
+      {
+        "correct_commit_pct": 50.0,
+        "unsafe_commit_pct": 24.4,
+        "block_pct": 25.6,
+        "unsafe_commits": 22,
+        "tau": 0.815
+      },
+      {
+        "correct_commit_pct": 48.9,
+        "unsafe_commit_pct": 23.3,
+        "block_pct": 27.8,
+        "unsafe_commits": 21,
+        "tau": 0.818
+      },
+      {
+        "correct_commit_pct": 47.8,
+        "unsafe_commit_pct": 23.3,
+        "block_pct": 28.9,
+        "unsafe_commits": 21,
+        "tau": 0.819
+      },
+      {
+        "correct_commit_pct": 46.7,
+        "unsafe_commit_pct": 21.1,
+        "block_pct": 32.2,
+        "unsafe_commits": 19,
+        "tau": 0.821
+      },
+      {
+        "correct_commit_pct": 45.6,
+        "unsafe_commit_pct": 20.0,
+        "block_pct": 34.4,
+        "unsafe_commits": 18,
+        "tau": 0.822
+      },
+      {
+        "correct_commit_pct": 45.6,
+        "unsafe_commit_pct": 18.9,
+        "block_pct": 35.6,
+        "unsafe_commits": 17,
+        "tau": 0.823
+      },
+      {
+        "correct_commit_pct": 44.4,
+        "unsafe_commit_pct": 17.8,
+        "block_pct": 37.8,
+        "unsafe_commits": 16,
+        "tau": 0.825
+      },
+      {
+        "correct_commit_pct": 42.2,
+        "unsafe_commit_pct": 16.7,
+        "block_pct": 41.1,
+        "unsafe_commits": 15,
+        "tau": 0.827
+      },
+      {
+        "correct_commit_pct": 41.1,
+        "unsafe_commit_pct": 15.6,
+        "block_pct": 43.3,
+        "unsafe_commits": 14,
+        "tau": 0.828
+      },
+      {
+        "correct_commit_pct": 41.1,
+        "unsafe_commit_pct": 14.4,
+        "block_pct": 44.4,
+        "unsafe_commits": 13,
+        "tau": 0.829
+      },
+      {
+        "correct_commit_pct": 40.0,
+        "unsafe_commit_pct": 13.3,
+        "block_pct": 46.7,
+        "unsafe_commits": 12,
+        "tau": 0.831
+      },
+      {
+        "correct_commit_pct": 40.0,
+        "unsafe_commit_pct": 12.2,
+        "block_pct": 47.8,
+        "unsafe_commits": 11,
+        "tau": 0.832
+      },
+      {
+        "correct_commit_pct": 40.0,
+        "unsafe_commit_pct": 11.1,
+        "block_pct": 48.9,
+        "unsafe_commits": 10,
+        "tau": 0.835
+      },
+      {
+        "correct_commit_pct": 40.0,
+        "unsafe_commit_pct": 7.8,
+        "block_pct": 52.2,
+        "unsafe_commits": 7,
+        "tau": 0.836
+      },
+      {
+        "correct_commit_pct": 40.0,
+        "unsafe_commit_pct": 6.7,
+        "block_pct": 53.3,
+        "unsafe_commits": 6,
+        "tau": 0.838
+      },
+      {
+        "correct_commit_pct": 38.9,
+        "unsafe_commit_pct": 6.7,
+        "block_pct": 54.4,
+        "unsafe_commits": 6,
+        "tau": 0.839
+      },
+      {
+        "correct_commit_pct": 38.9,
+        "unsafe_commit_pct": 5.6,
+        "block_pct": 55.6,
+        "unsafe_commits": 5,
+        "tau": 0.961
+      },
+      {
+        "correct_commit_pct": 36.7,
+        "unsafe_commit_pct": 0.0,
+        "block_pct": 63.3,
+        "unsafe_commits": 0,
+        "tau": 0.982
+      }
+    ]
+  },
+  "coact": {
+    "correct_commit_pct": 35.6,
+    "unsafe_commit_pct": 5.6,
+    "block_pct": 58.9,
+    "unsafe_commits": 5,
+    "description": "Two viewpoints must localise the referent to within 5 cm of the same point before anything moves."
+  },
+  "coact_after_correction": {
+    "correct_commit_pct": 67.8,
+    "unsafe_commit_pct": 5.6,
+    "block_pct": 26.7,
+    "unsafe_commits": 5,
+    "description": "CoAct, then one spoken correction on every block."
+  },
+  "recovery_by_disagreement_type": {
+    "perspective": {
+      "blocks": 37,
+      "recovered": 29,
+      "on_target": 29,
+      "recovered_pct": 78.4,
+      "on_target_pct": 78.4
+    },
+    "no_target": {
+      "blocks": 16,
+      "recovered": 0,
+      "on_target": 0,
+      "recovered_pct": 0.0,
+      "on_target_pct": 0.0
+    }
+  },
+  "by_condition": {
+    "clean": {
+      "trials": 30,
+      "single_agent_unsafe_pct": 30.0,
+      "coact_unsafe_pct": 0.0,
+      "coact_block_pct": 50.0,
+      "both_agents_agreed_and_were_wrong": 0
+    },
+    "depth_skew": {
+      "trials": 30,
+      "single_agent_unsafe_pct": 33.3,
+      "coact_unsafe_pct": 0.0,
+      "coact_block_pct": 53.3,
+      "both_agents_agreed_and_were_wrong": 0
+    },
+    "occluded": {
+      "trials": 30,
+      "single_agent_unsafe_pct": 66.7,
+      "coact_unsafe_pct": 16.7,
+      "coact_block_pct": 73.3,
+      "both_agents_agreed_and_were_wrong": 5
+    }
+  },
+  "ambiguity_detection": {
+    "recall_pct": 82.2,
+    "precision_vs_clean_unambiguous": 1.0,
+    "f1": 0.902
+  },
+  "correction": {
+    "description": "After a block the human names the plate; both agents re-ground.",
+    "attempts": 53,
+    "consensus_restored_pct": 54.7,
+    "restored_on_intended_target_pct": 54.7
+  },
+  "perception": {
+    "mean_detections_per_view": 2.76,
+    "views_missing_a_plate_pct": 17.2
+  },
+  "trials": [
+    {
+      "index": 0,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        0.0007176400861337844,
+        -0.09068622166174828
+      ],
+      "a_xy": [
+        0.0023718715484319364,
+        -0.09856123992243525
+      ],
+      "b_xy": [
+        -0.0010476125024601601,
+        -0.09507404028779434
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0049,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 1,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        -0.09846295750655923,
+        -0.09552396077700709
+      ],
+      "a_xy": [
+        -0.09680323137095881,
+        -0.09641875234952865
+      ],
+      "b_xy": [
+        0.10681856789998612,
+        0.09976694499572074
+      ],
+      "a_conf": 0.838,
+      "b_conf": 0.841,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2828,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 2,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        -0.007644155238432633,
+        0.08416963648203868
+      ],
+      "a_xy": null,
+      "b_xy": [
+        -0.013813463525661651,
+        0.08901448241587645
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 3,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        -0.0006879626832065194,
+        -0.07953117232722276
+      ],
+      "a_xy": [
+        0.0024445293931356638,
+        -0.08484061924511699
+      ],
+      "b_xy": [
+        -0.007918669296117065,
+        0.09140276720407767
+      ],
+      "a_conf": 0.807,
+      "b_conf": 0.804,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1765,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 4,
+      "instruction": "Put the cup on the big plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        0.09803969069321009,
+        0.0877792620095161
+      ],
+      "a_xy": [
+        0.0979235550347421,
+        0.0951744180105635
+      ],
+      "b_xy": [
+        0.09708579668577094,
+        0.09267115099570288
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0026,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 5,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        -0.002996432245616634,
+        0.08793349590597975
+      ],
+      "a_xy": [
+        7.859778630214809e-06,
+        0.08968857943227548
+      ],
+      "b_xy": [
+        -0.007883512912026491,
+        0.09270300829492702
+      ],
+      "a_conf": 0.961,
+      "b_conf": 0.828,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0084,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 1,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 6,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        -0.0007660942740046819,
+        0.08136096757813088
+      ],
+      "a_xy": [
+        0.0022990884213642815,
+        0.08302586549283252
+      ],
+      "b_xy": [
+        -0.005501857298489177,
+        0.08613629118927435
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0084,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 7,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        -0.10943157870972206,
+        -0.08969406965576603
+      ],
+      "a_xy": [
+        0.1173009239514376,
+        0.10071015071366754
+      ],
+      "b_xy": [
+        -0.11020698507073018,
+        -0.1015020472585889
+      ],
+      "a_conf": 0.835,
+      "b_conf": 0.834,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.3044,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 8,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        0.006621871231365725,
+        0.08164685747962394
+      ],
+      "a_xy": null,
+      "b_xy": [
+        0.004733090380734106,
+        0.08640767545964566
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 9,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        -0.0021175996804927173,
+        0.08763045636330388
+      ],
+      "a_xy": [
+        0.001033712627856731,
+        0.08942409348656662
+      ],
+      "b_xy": [
+        -0.008608700908418476,
+        -0.08556244069465752
+      ],
+      "a_conf": 0.813,
+      "b_conf": 0.811,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1753,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 10,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        -0.0975133524525236,
+        -0.08571862024423042
+      ],
+      "a_xy": [
+        -0.095915447417242,
+        -0.08697773224895332
+      ],
+      "b_xy": [
+        -0.09901412528488146,
+        -0.09245907872377
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0063,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 11,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        -0.00042756112980017573,
+        -0.08415886462309381
+      ],
+      "a_xy": [
+        0.0008234529414720693,
+        -0.0934661149297172
+      ],
+      "b_xy": [
+        -0.002192004860122887,
+        -0.09046222352422183
+      ],
+      "a_conf": 0.825,
+      "b_conf": 0.961,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0043,
+      "n_det_a": 3,
+      "n_det_b": 1,
+      "n_plate_a": 2,
+      "n_plate_b": 1,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 12,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        -0.004777696055412762,
+        -0.09066600416477642
+      ],
+      "a_xy": [
+        -0.0029345182521588464,
+        -0.0956311344138842
+      ],
+      "b_xy": [
+        -0.007918134001502541,
+        -0.09245132742234721
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0059,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 13,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        0.10979746040751429,
+        -0.09346521019936829
+      ],
+      "a_xy": [
+        0.11252364141988663,
+        -0.09439716059085643
+      ],
+      "b_xy": [
+        -0.10488799488639328,
+        0.08776311323852272
+      ],
+      "a_conf": 0.819,
+      "b_conf": 0.819,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2836,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 14,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        -0.0060658767316136555,
+        0.08208746726552446
+      ],
+      "a_xy": [
+        -0.004630886862881989,
+        0.08954758105152347
+      ],
+      "b_xy": null,
+      "a_conf": 0.982,
+      "b_conf": 0.0,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 0,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 15,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.006429565633248528,
+        0.09378270862040552
+      ],
+      "a_xy": [
+        -0.0050444370103904235,
+        0.09801712392990386
+      ],
+      "b_xy": [
+        0.002582397067503628,
+        -0.08473881635785459
+      ],
+      "a_conf": 0.821,
+      "b_conf": 0.821,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1829,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 16,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        0.10811716379913304,
+        -0.08576853325567983
+      ],
+      "a_xy": [
+        0.10520166257218228,
+        -0.09622194814947548
+      ],
+      "b_xy": [
+        0.1030449053437093,
+        -0.09743680741447851
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0025,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 17,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        0.009417803544755287,
+        0.09099349339347661
+      ],
+      "a_xy": [
+        0.011462397051091588,
+        -0.09768143423742097
+      ],
+      "b_xy": [
+        0.007543611625447422,
+        -0.09518109804483287
+      ],
+      "a_conf": 0.825,
+      "b_conf": 0.961,
+      "a_correct": false,
+      "b_correct": false,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": false,
+      "separation_m": 0.0046,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 1,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 18,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        0.0066838999287893875,
+        -0.09678190950900062
+      ],
+      "a_xy": [
+        0.011045311737897967,
+        -0.10123166586954686
+      ],
+      "b_xy": [
+        0.0036346015959779487,
+        -0.09864500438291893
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0078,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 19,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        0.11052077931153334,
+        0.08099604969804684
+      ],
+      "a_xy": [
+        -0.09611203055280643,
+        -0.08511894295932891
+      ],
+      "b_xy": [
+        0.10482199266622938,
+        0.09061967995239299
+      ],
+      "a_conf": 0.811,
+      "b_conf": 0.816,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2669,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 20,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        -0.008863548599407925,
+        -0.09417387737677736
+      ],
+      "a_xy": [
+        -0.007968006170921416,
+        -0.09919444752242798
+      ],
+      "b_xy": null,
+      "a_conf": 0.982,
+      "b_conf": 0.0,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 0,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 21,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        0.00046419305749766104,
+        0.09551953288051196
+      ],
+      "a_xy": [
+        0.011134506741850458,
+        -0.09239934894113681
+      ],
+      "b_xy": [
+        -0.0010391262203296447,
+        0.10332219568132855
+      ],
+      "a_conf": 0.828,
+      "b_conf": 0.83,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1961,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 22,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        0.09645092199312977,
+        0.08281277516906539
+      ],
+      "a_xy": [
+        0.09631998205205355,
+        0.08865789394988788
+      ],
+      "b_xy": [
+        0.09446732571790883,
+        0.08456147421000336
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0045,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 23,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        -0.005608243383961606,
+        -0.07894991742162027
+      ],
+      "a_xy": [
+        0.0011228449896540926,
+        0.10174075478466388
+      ],
+      "b_xy": [
+        -0.008650450350613514,
+        -0.08076613655713578
+      ],
+      "a_conf": 0.961,
+      "b_conf": 0.821,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1828,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 1,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 24,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.0033700422171601876,
+        -0.08552145852216271
+      ],
+      "a_xy": [
+        -0.002869014453567076,
+        -0.09457339419548308
+      ],
+      "b_xy": [
+        -0.005257788981050615,
+        -0.0913829429156881
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.004,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 25,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        0.09579176379828135,
+        0.09357994860135783
+      ],
+      "a_xy": [
+        -0.10783675826875744,
+        -0.10039147548775897
+      ],
+      "b_xy": [
+        0.09380746115742056,
+        0.09427970579239647
+      ],
+      "a_conf": 0.839,
+      "b_conf": 0.836,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2803,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 26,
+      "instruction": "Put the cup on the big plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        -0.00855171810553619,
+        -0.07923300581919673
+      ],
+      "a_xy": null,
+      "b_xy": [
+        -0.010970522308065833,
+        -0.08632724940127229
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 1,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 27,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.00913588620321229,
+        0.0921907343623692
+      ],
+      "a_xy": [
+        0.0010488875478332216,
+        -0.08532134800491076
+      ],
+      "b_xy": [
+        -0.012440194626208767,
+        0.10012529885680992
+      ],
+      "a_conf": 0.819,
+      "b_conf": 0.816,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1859,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 28,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        -0.1095895526786147,
+        0.09407357889684484
+      ],
+      "a_xy": [
+        -0.10785360070060496,
+        0.09587873412952377
+      ],
+      "b_xy": [
+        -0.11308892731944603,
+        0.09468953591150793
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0054,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 29,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        -0.003844339000025134,
+        0.08230362239218361
+      ],
+      "a_xy": [
+        -0.002197881435721305,
+        0.0889285856803948
+      ],
+      "b_xy": [
+        -0.002098084252657173,
+        -0.0822096229389021
+      ],
+      "a_conf": 0.808,
+      "b_conf": 0.961,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1711,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 1,
+      "disagreement_type": "perspective",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 30,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        0.004817783963658551,
+        0.08311187753539394
+      ],
+      "a_xy": [
+        0.007909983994860925,
+        0.08478043396315108
+      ],
+      "b_xy": [
+        0.002180601833723761,
+        0.08775597714405622
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0065,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 31,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        -0.09554754004107247,
+        -0.08705853251762183
+      ],
+      "a_xy": [
+        -0.09495253772390644,
+        -0.09249062395693121
+      ],
+      "b_xy": [
+        0.10219184347794047,
+        0.0860654115769025
+      ],
+      "a_conf": 0.818,
+      "b_conf": 0.816,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.266,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 32,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        5.528012752799294e-05,
+        0.08201960108402064
+      ],
+      "a_xy": null,
+      "b_xy": [
+        -0.003930575380920565,
+        0.08701996170044014
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 33,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.0034773049174730095,
+        0.09769458170148591
+      ],
+      "a_xy": [
+        0.009152420833442532,
+        -0.08562555893543733
+      ],
+      "b_xy": [
+        -0.005890535091148563,
+        0.10449069955247607
+      ],
+      "a_conf": 0.822,
+      "b_conf": 0.822,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1907,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 34,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        -0.09847181756996039,
+        -0.08631876966387522
+      ],
+      "a_xy": [
+        -0.09702702832490628,
+        -0.08825950062995194
+      ],
+      "b_xy": [
+        -0.10021338982756017,
+        -0.0934627333022614
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0061,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 35,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        0.0025553421704233685,
+        -0.08547547082134427
+      ],
+      "a_xy": [
+        0.0064592964613998105,
+        -0.09044630070290506
+      ],
+      "b_xy": [
+        -0.0021249356606505843,
+        0.08897627394634859
+      ],
+      "a_conf": 0.81,
+      "b_conf": 0.961,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1796,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 1,
+      "disagreement_type": "perspective",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 36,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.005385277459050926,
+        0.090998645600041
+      ],
+      "a_xy": [
+        -0.004146466545538352,
+        0.0957978458872176
+      ],
+      "b_xy": [
+        -0.008287262043566557,
+        0.09899090777962771
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0052,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 37,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        -0.11345056360964398,
+        -0.09505149854246185
+      ],
+      "a_xy": [
+        0.1056909410101004,
+        0.10050172819639237
+      ],
+      "b_xy": [
+        -0.11931786138161443,
+        -0.10153954509014902
+      ],
+      "a_conf": 0.835,
+      "b_conf": 0.835,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.3024,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 38,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        0.00033071388088815393,
+        0.08729325706748628
+      ],
+      "a_xy": [
+        0.003401617651887845,
+        0.0890184620741324
+      ],
+      "b_xy": null,
+      "a_conf": 0.982,
+      "b_conf": 0.0,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 0,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 39,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.007165186442809377,
+        -0.0875186857489036
+      ],
+      "a_xy": [
+        -0.0074543097185496565,
+        -0.09691381804008085
+      ],
+      "b_xy": [
+        0.007771067669827769,
+        0.08710668724849369
+      ],
+      "a_conf": 0.815,
+      "b_conf": 0.815,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1846,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 40,
+      "instruction": "Put the cup on the big plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        -0.10136823766667243,
+        -0.08989161340863241
+      ],
+      "a_xy": [
+        -0.100151319884346,
+        -0.09620965969665761
+      ],
+      "b_xy": [
+        -0.1016961497043633,
+        -0.0996978076603765
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0038,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 41,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        0.004260471315938475,
+        0.09603133126197871
+      ],
+      "a_xy": [
+        0.011287756287437944,
+        -0.1002367245460133
+      ],
+      "b_xy": [
+        0.003686721651920466,
+        -0.09751154995085146
+      ],
+      "a_conf": 0.836,
+      "b_conf": 0.961,
+      "a_correct": false,
+      "b_correct": false,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": false,
+      "separation_m": 0.0081,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 1,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 42,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.007021712325613989,
+        -0.0785792280635643
+      ],
+      "a_xy": [
+        -0.006975086670872377,
+        -0.08931396891712504
+      ],
+      "b_xy": [
+        -0.009447776605129077,
+        -0.08570257576382648
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0044,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 43,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        -0.10060854836097703,
+        0.07898952068887134
+      ],
+      "a_xy": [
+        -0.09410037552189787,
+        0.0945280985455926
+      ],
+      "b_xy": [
+        0.111347231774373,
+        -0.08397446996267707
+      ],
+      "a_conf": 0.811,
+      "b_conf": 0.811,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2722,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 44,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        -0.0017026669765021138,
+        0.08363492079045949
+      ],
+      "a_xy": null,
+      "b_xy": [
+        -0.006680670438921621,
+        0.08830558723320983
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 45,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.0014515395254498624,
+        0.08895570596939431
+      ],
+      "a_xy": [
+        0.0001904085907080133,
+        0.09394489499054252
+      ],
+      "b_xy": [
+        -0.004027559333957265,
+        -0.09313239890615084
+      ],
+      "a_conf": 0.827,
+      "b_conf": 0.826,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1871,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 46,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        0.10265675759522372,
+        -0.08308318908152458
+      ],
+      "a_xy": [
+        0.10536874423804082,
+        -0.08473196333940038
+      ],
+      "b_xy": [
+        0.10085090221544879,
+        -0.08596477174743751
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0047,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 47,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        -0.0013632662662947832,
+        -0.0917596796678478
+      ],
+      "a_xy": [
+        -0.0006619843365784361,
+        -0.10030144401697696
+      ],
+      "b_xy": [
+        0.006307020149137699,
+        0.09050427381892734
+      ],
+      "a_conf": 0.823,
+      "b_conf": 0.961,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1909,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 1,
+      "disagreement_type": "perspective",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 48,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        0.008604770142857323,
+        0.0965632142164691
+      ],
+      "a_xy": [
+        0.011800113437979654,
+        0.09845608856508052
+      ],
+      "b_xy": [
+        0.006735434707232646,
+        0.10124838734430752
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0058,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 49,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        0.09575183460794474,
+        -0.0836995674515095
+      ],
+      "a_xy": [
+        -0.11312377780991617,
+        0.08476209009311136
+      ],
+      "b_xy": [
+        0.09213111094485787,
+        -0.09484573247721063
+      ],
+      "a_conf": 0.813,
+      "b_conf": 0.812,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2727,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 50,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        0.008870809165074078,
+        0.08183403530539303
+      ],
+      "a_xy": null,
+      "b_xy": [
+        0.00767710514371972,
+        0.08648978089036656
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 51,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.008893825706573221,
+        0.08188230450426194
+      ],
+      "a_xy": [
+        -0.008921053202598839,
+        -0.0948241843095682
+      ],
+      "b_xy": [
+        -0.012497549275376885,
+        0.09177676247187029
+      ],
+      "a_conf": 0.821,
+      "b_conf": 0.817,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1866,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 52,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        0.10936664483257484,
+        0.08524639783539871
+      ],
+      "a_xy": [
+        0.11345861053195799,
+        0.09184369553414906
+      ],
+      "b_xy": [
+        0.1074884724612915,
+        0.08682028819328638
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0078,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 53,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        0.00903853768461898,
+        -0.08808470541088308
+      ],
+      "a_xy": [
+        -0.0024867604356324513,
+        0.09509415248181877
+      ],
+      "b_xy": [
+        0.0076576567397390605,
+        -0.09334346665163916
+      ],
+      "a_conf": 0.827,
+      "b_conf": 0.961,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1887,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 1,
+      "disagreement_type": "perspective",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 54,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        0.0019225427719818163,
+        0.08630769867477424
+      ],
+      "a_xy": [
+        0.004923599100103482,
+        0.08809747899382842
+      ],
+      "b_xy": [
+        -0.0013712222873112911,
+        0.09113868841603118
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.007,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 55,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        -0.10752232760414736,
+        -0.09136605020725203
+      ],
+      "a_xy": [
+        0.09596619840035842,
+        0.09667759885829547
+      ],
+      "b_xy": [
+        -0.1099127511480526,
+        -0.1002616208111753
+      ],
+      "a_conf": 0.831,
+      "b_conf": 0.828,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2849,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 56,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        0.005374641689892653,
+        0.0841739842328441
+      ],
+      "a_xy": null,
+      "b_xy": [
+        0.0031117601515694426,
+        0.08916854266673777
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 57,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.0007189877238005498,
+        -0.08193323839901734
+      ],
+      "a_xy": [
+        0.0005933918970184027,
+        -0.09131725952306535
+      ],
+      "b_xy": [
+        -0.001005317756931745,
+        0.090935073666991
+      ],
+      "a_conf": 0.813,
+      "b_conf": 0.813,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1823,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 58,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        0.11348456148440098,
+        0.08394811752494746
+      ],
+      "a_xy": [
+        0.11831231800400427,
+        0.09087902300746362
+      ],
+      "b_xy": [
+        0.11171059130760153,
+        0.08634561263440617
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.008,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 59,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        -0.002269704224199227,
+        -0.09297906358338237
+      ],
+      "a_xy": [
+        0.0014464793287815025,
+        0.1001100303647366
+      ],
+      "b_xy": [
+        -0.0020194847936941263,
+        0.10368051354228662
+      ],
+      "a_conf": 0.961,
+      "b_conf": 0.836,
+      "a_correct": false,
+      "b_correct": false,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": false,
+      "separation_m": 0.005,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 1,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 60,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        0.005057713413229194,
+        -0.09305384975556183
+      ],
+      "a_xy": [
+        0.007189275802584216,
+        -0.10055861233615052
+      ],
+      "b_xy": [
+        0.0035152721268382203,
+        -0.09712998473558414
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.005,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 61,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        0.10749203146756925,
+        -0.09383317919128796
+      ],
+      "a_xy": [
+        -0.09422779104606549,
+        0.10042067523028156
+      ],
+      "b_xy": [
+        0.10562202237547164,
+        -0.09565289116261609
+      ],
+      "a_conf": 0.832,
+      "b_conf": 0.833,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.28,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 62,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        0.001337684134791177,
+        0.08545942074865945
+      ],
+      "a_xy": null,
+      "b_xy": [
+        -0.0022701243461618614,
+        0.09034523126664079
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 2,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 63,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        0.009819113021645417,
+        0.08004664841361225
+      ],
+      "a_xy": [
+        -0.004054450436102308,
+        -0.08709356782646163
+      ],
+      "b_xy": [
+        0.009989316307521978,
+        0.09060217187627284
+      ],
+      "a_conf": 0.806,
+      "b_conf": 0.808,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1782,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 64,
+      "instruction": "Put the cup on the big plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        0.09650233169976427,
+        -0.08774661992995034
+      ],
+      "a_xy": [
+        0.0980395868806902,
+        -0.09194422425118148
+      ],
+      "b_xy": [
+        0.09571809514186186,
+        -0.0935422848715411
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0028,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 65,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        -0.004901726538205744,
+        -0.08601153261479311
+      ],
+      "a_xy": [
+        0.0004885618672268444,
+        0.08249769621291389
+      ],
+      "b_xy": [
+        -0.006719337222460708,
+        -0.0917877422661056
+      ],
+      "a_conf": 0.812,
+      "b_conf": 0.961,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1744,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 1,
+      "disagreement_type": "perspective",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 66,
+      "instruction": "Put the cup on the big plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        0.005916877447857962,
+        -0.0847194712832365
+      ],
+      "a_xy": [
+        0.008554003713544645,
+        -0.09338790500600988
+      ],
+      "b_xy": [
+        0.004320934718945624,
+        -0.09076444384430994
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.005,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 67,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        -0.1078563656785965,
+        0.0863289076415022
+      ],
+      "a_xy": [
+        -0.10283889528573997,
+        0.09886726583398422
+      ],
+      "b_xy": [
+        0.11227061953519624,
+        -0.09357702167557051
+      ],
+      "a_conf": 0.829,
+      "b_conf": 0.828,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2886,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 68,
+      "instruction": "Put the cup on the big plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        0.001555913222258976,
+        -0.09070545758889523
+      ],
+      "a_xy": null,
+      "b_xy": [
+        0.00019860034238144975,
+        -0.09596957875115875
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 69,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        -0.006566286810355362,
+        -0.09104110120485796
+      ],
+      "a_xy": [
+        -0.005019020413773223,
+        0.08727691250303159
+      ],
+      "b_xy": [
+        -0.009856614557214205,
+        -0.09287761283305877
+      ],
+      "a_conf": 0.819,
+      "b_conf": 0.816,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1802,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 70,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        0.09672588853600932,
+        0.09224620563094957
+      ],
+      "a_xy": [
+        0.09736771860273846,
+        0.09802564254560095
+      ],
+      "b_xy": [
+        0.09481699816818123,
+        0.09286816469404954
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0058,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 71,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        0.008770981061144547,
+        0.08112957799189931
+      ],
+      "a_xy": [
+        0.011982417082752495,
+        0.08283504121047879
+      ],
+      "b_xy": [
+        0.007645930788211186,
+        0.08598091277278716
+      ],
+      "a_conf": 0.961,
+      "b_conf": 0.805,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0054,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 1,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 72,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        -0.0038357675697468733,
+        -0.093014823015669
+      ],
+      "a_xy": [
+        -0.0017320107358461123,
+        -0.09795369614819711
+      ],
+      "b_xy": [
+        -0.006978604127771959,
+        -0.09482204302750498
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0061,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 73,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        -0.10769335372869475,
+        0.09404564002781617
+      ],
+      "a_xy": [
+        0.10571168743708431,
+        -0.09758276766307863
+      ],
+      "b_xy": [
+        -0.10999370739157238,
+        0.09686635892739259
+      ],
+      "a_conf": 0.835,
+      "b_conf": 0.833,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2904,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 74,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        7.848127109817866e-05,
+        0.08555725259374762
+      ],
+      "a_xy": null,
+      "b_xy": [
+        -0.003944052045471991,
+        0.0905925701037997
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 75,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        0.002208892815735901,
+        0.08304441531878225
+      ],
+      "a_xy": [
+        0.008733398864922748,
+        -0.09838153875265779
+      ],
+      "b_xy": [
+        0.0007055247718891766,
+        0.09236573445532616
+      ],
+      "a_conf": 0.823,
+      "b_conf": 0.824,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1909,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 76,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        0.09822458693930086,
+        0.09672807521793218
+      ],
+      "a_xy": [
+        0.09815144748137145,
+        0.10325471229236134
+      ],
+      "b_xy": [
+        0.09741993613700867,
+        0.09967816138718186
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0037,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 77,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        0.0016008737219465833,
+        0.09565069870592668
+      ],
+      "a_xy": [
+        -0.0006661634213587786,
+        -0.08600462157030947
+      ],
+      "b_xy": [
+        -3.122949134970465e-05,
+        0.10295505484088956
+      ],
+      "a_conf": 0.961,
+      "b_conf": 0.82,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.189,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 1,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 78,
+      "instruction": "Put the cup on the big plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        0.004871894412931788,
+        -0.09703417091125496
+      ],
+      "a_xy": [
+        0.006662128077024543,
+        -0.10462807608138593
+      ],
+      "b_xy": [
+        0.0036901555964582444,
+        -0.1010486332937689
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0047,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 79,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        -0.1105672497824781,
+        -0.0921805676197928
+      ],
+      "a_xy": [
+        -0.10917600203306072,
+        -0.09295530788159345
+      ],
+      "b_xy": [
+        0.10061981269661424,
+        0.09284250771786752
+      ],
+      "a_conf": 0.825,
+      "b_conf": 0.828,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2802,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 80,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        0.0017818321486900296,
+        -0.09391631258037171
+      ],
+      "a_xy": null,
+      "b_xy": [
+        0.00038043360517303615,
+        -0.09825388535843997
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 81,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.0047152032007075255,
+        0.07822992075326003
+      ],
+      "a_xy": [
+        0.013211416795653685,
+        -0.08704552630283525
+      ],
+      "b_xy": [
+        -0.007699849786334145,
+        0.08877323630218031
+      ],
+      "a_conf": 0.806,
+      "b_conf": 0.805,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1771,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 82,
+      "instruction": "Place the cup on the small plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "small",
+      "truth_xy": [
+        -0.11411996035851113,
+        0.08863054800409453
+      ],
+      "a_xy": [
+        -0.11236699966400993,
+        0.09041233434399844
+      ],
+      "b_xy": [
+        -0.11783881725986506,
+        0.08914694142022976
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0056,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 83,
+      "instruction": "Put the cup on the plate on the right.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        0.002853873745642334,
+        -0.08504806586480587
+      ],
+      "a_xy": [
+        0.004095183979402117,
+        0.0930488186493693
+      ],
+      "b_xy": [
+        0.0007172423388964733,
+        0.09646872188428285
+      ],
+      "a_conf": 0.961,
+      "b_conf": 0.819,
+      "a_correct": false,
+      "b_correct": false,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": false,
+      "separation_m": 0.0048,
+      "n_det_a": 2,
+      "n_det_b": 3,
+      "n_plate_a": 1,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 84,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "clean",
+      "intended": "large",
+      "truth_xy": [
+        -0.004771465177491802,
+        -0.08511960493939853
+      ],
+      "a_xy": [
+        -0.004644659599560619,
+        -0.09426136368030502
+      ],
+      "b_xy": [
+        -0.006872611708140408,
+        -0.09052226263885585
+      ],
+      "a_conf": 0.982,
+      "b_conf": 0.982,
+      "a_correct": true,
+      "b_correct": true,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": true,
+      "separation_m": 0.0044,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    },
+    {
+      "index": 85,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        -0.10908766021698665,
+        -0.07942858669681238
+      ],
+      "a_xy": [
+        0.11240207588229961,
+        0.1026553388001881
+      ],
+      "b_xy": [
+        -0.10904305424234978,
+        -0.09153517959947667
+      ],
+      "a_conf": 0.829,
+      "b_conf": 0.826,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.2945,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 86,
+      "instruction": "Put the cup on the little plate.",
+      "family": "unambiguous",
+      "condition": "occluded",
+      "intended": "small",
+      "truth_xy": [
+        -0.003462572069177483,
+        -0.08039670404960107
+      ],
+      "a_xy": [
+        -0.0013199630086607739,
+        -0.0854645937652618
+      ],
+      "b_xy": null,
+      "a_conf": 0.982,
+      "b_conf": 0.0,
+      "a_correct": true,
+      "b_correct": false,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 3,
+      "n_det_b": 2,
+      "n_plate_a": 2,
+      "n_plate_b": 0,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 87,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "clean",
+      "intended": "small",
+      "truth_xy": [
+        -0.005323430363783171,
+        -0.08030482588592903
+      ],
+      "a_xy": [
+        -0.0007891978512552522,
+        0.09480050819105053
+      ],
+      "b_xy": [
+        -0.00843625539335352,
+        -0.0822071368354219
+      ],
+      "a_conf": 0.815,
+      "b_conf": 0.814,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "DISAGREEMENT",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": 0.1772,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 2,
+      "n_plate_b": 2,
+      "disagreement_type": "perspective",
+      "recovered": true,
+      "recovery_correct": true
+    },
+    {
+      "index": 88,
+      "instruction": "Place the cup on the large plate.",
+      "family": "unambiguous",
+      "condition": "depth_skew",
+      "intended": "large",
+      "truth_xy": [
+        0.09585292647734399,
+        0.0793565538431384
+      ],
+      "a_xy": null,
+      "b_xy": [
+        0.09146091054880368,
+        0.08882744986935323
+      ],
+      "a_conf": 0.0,
+      "b_conf": 0.982,
+      "a_correct": false,
+      "b_correct": true,
+      "verdict": "NO_TARGET",
+      "coact_blocked": true,
+      "coact_commit_correct": null,
+      "separation_m": null,
+      "n_det_a": 3,
+      "n_det_b": 3,
+      "n_plate_a": 0,
+      "n_plate_b": 2,
+      "disagreement_type": "no_target",
+      "recovered": false,
+      "recovery_correct": false
+    },
+    {
+      "index": 89,
+      "instruction": "Put the cup on the plate on the left.",
+      "family": "ambiguous",
+      "condition": "occluded",
+      "intended": "large",
+      "truth_xy": [
+        -0.005068452029567449,
+        0.08206320886492277
+      ],
+      "a_xy": [
+        0.009961274237573092,
+        -0.0888297730748566
+      ],
+      "b_xy": [
+        0.0020233352689992823,
+        -0.08554608349866294
+      ],
+      "a_conf": 0.961,
+      "b_conf": 0.81,
+      "a_correct": false,
+      "b_correct": false,
+      "verdict": "CONSENSUS",
+      "coact_blocked": false,
+      "coact_commit_correct": false,
+      "separation_m": 0.0086,
+      "n_det_a": 1,
+      "n_det_b": 3,
+      "n_plate_a": 1,
+      "n_plate_b": 2,
+      "disagreement_type": null,
+      "recovered": null,
+      "recovery_correct": null
+    }
+  ],
+  "ablation_apparent_sizing": {
+    "meta": {
+      "trials": 90,
+      "seed": 7,
+      "elapsed_s": 48.4,
+      "agree_tolerance_m": 0.05,
+      "confidence_floor": 0.55,
+      "ambiguous_instructions": 45,
+      "unambiguous_instructions": 45,
+      "conditions": [
+        "clean",
+        "depth_skew",
+        "occluded"
+      ],
+      "sizing": "apparent"
+    },
+    "single_agent": {
+      "correct_commit_pct": 48.9,
+      "unsafe_commit_pct": 30.0,
+      "block_pct": 21.1,
+      "unsafe_commits": 27,
+      "description": "One camera grounds the instruction and commits. No gate."
+    },
+    "confidence_gate": {
+      "description": "One camera, blocking when its own confidence < tau.",
+      "matched_to_coact_block_rate": {
+        "correct_commit_pct": 28.9,
+        "unsafe_commit_pct": 0.0,
+        "block_pct": 71.1,
+        "unsafe_commits": 0,
+        "tau": 0.982
+      },
+      "best_achievable_safety": {
+        "correct_commit_pct": 28.9,
+        "unsafe_commit_pct": 0.0,
+        "block_pct": 71.1,
+        "unsafe_commits": 0,
+        "tau": 0.982
+      },
+      "sweep": [
+        {
+          "correct_commit_pct": 48.9,
+          "unsafe_commit_pct": 30.0,
+          "block_pct": 21.1,
+          "unsafe_commits": 27,
+          "tau": 0.0
+        },
+        {
+          "correct_commit_pct": 48.9,
+          "unsafe_commit_pct": 30.0,
+          "block_pct": 21.1,
+          "unsafe_commits": 27,
+          "tau": 0.806
+        },
+        {
+          "correct_commit_pct": 48.9,
+          "unsafe_commit_pct": 27.8,
+          "block_pct": 23.3,
+          "unsafe_commits": 25,
+          "tau": 0.807
+        },
+        {
+          "correct_commit_pct": 47.8,
+          "unsafe_commit_pct": 27.8,
+          "block_pct": 24.4,
+          "unsafe_commits": 25,
+          "tau": 0.808
+        },
+        {
+          "correct_commit_pct": 46.7,
+          "unsafe_commit_pct": 27.8,
+          "block_pct": 25.6,
+          "unsafe_commits": 25,
+          "tau": 0.81
+        },
+        {
+          "correct_commit_pct": 45.6,
+          "unsafe_commit_pct": 27.8,
+          "block_pct": 26.7,
+          "unsafe_commits": 25,
+          "tau": 0.811
+        },
+        {
+          "correct_commit_pct": 44.4,
+          "unsafe_commit_pct": 26.7,
+          "block_pct": 28.9,
+          "unsafe_commits": 24,
+          "tau": 0.812
+        },
+        {
+          "correct_commit_pct": 44.4,
+          "unsafe_commit_pct": 25.6,
+          "block_pct": 30.0,
+          "unsafe_commits": 23,
+          "tau": 0.813
+        },
+        {
+          "correct_commit_pct": 42.2,
+          "unsafe_commit_pct": 24.4,
+          "block_pct": 33.3,
+          "unsafe_commits": 22,
+          "tau": 0.815
+        },
+        {
+          "correct_commit_pct": 41.1,
+          "unsafe_commit_pct": 23.3,
+          "block_pct": 35.6,
+          "unsafe_commits": 21,
+          "tau": 0.818
+        },
+        {
+          "correct_commit_pct": 40.0,
+          "unsafe_commit_pct": 23.3,
+          "block_pct": 36.7,
+          "unsafe_commits": 21,
+          "tau": 0.819
+        },
+        {
+          "correct_commit_pct": 38.9,
+          "unsafe_commit_pct": 21.1,
+          "block_pct": 40.0,
+          "unsafe_commits": 19,
+          "tau": 0.821
+        },
+        {
+          "correct_commit_pct": 37.8,
+          "unsafe_commit_pct": 20.0,
+          "block_pct": 42.2,
+          "unsafe_commits": 18,
+          "tau": 0.822
+        },
+        {
+          "correct_commit_pct": 37.8,
+          "unsafe_commit_pct": 18.9,
+          "block_pct": 43.3,
+          "unsafe_commits": 17,
+          "tau": 0.823
+        },
+        {
+          "correct_commit_pct": 36.7,
+          "unsafe_commit_pct": 17.8,
+          "block_pct": 45.6,
+          "unsafe_commits": 16,
+          "tau": 0.825
+        },
+        {
+          "correct_commit_pct": 34.4,
+          "unsafe_commit_pct": 16.7,
+          "block_pct": 48.9,
+          "unsafe_commits": 15,
+          "tau": 0.827
+        },
+        {
+          "correct_commit_pct": 33.3,
+          "unsafe_commit_pct": 15.6,
+          "block_pct": 51.1,
+          "unsafe_commits": 14,
+          "tau": 0.828
+        },
+        {
+          "correct_commit_pct": 33.3,
+          "unsafe_commit_pct": 14.4,
+          "block_pct": 52.2,
+          "unsafe_commits": 13,
+          "tau": 0.829
+        },
+        {
+          "correct_commit_pct": 32.2,
+          "unsafe_commit_pct": 13.3,
+          "block_pct": 54.4,
+          "unsafe_commits": 12,
+          "tau": 0.831
+        },
+        {
+          "correct_commit_pct": 32.2,
+          "unsafe_commit_pct": 12.2,
+          "block_pct": 55.6,
+          "unsafe_commits": 11,
+          "tau": 0.832
+        },
+        {
+          "correct_commit_pct": 32.2,
+          "unsafe_commit_pct": 11.1,
+          "block_pct": 56.7,
+          "unsafe_commits": 10,
+          "tau": 0.835
+        },
+        {
+          "correct_commit_pct": 32.2,
+          "unsafe_commit_pct": 7.8,
+          "block_pct": 60.0,
+          "unsafe_commits": 7,
+          "tau": 0.836
+        },
+        {
+          "correct_commit_pct": 32.2,
+          "unsafe_commit_pct": 6.7,
+          "block_pct": 61.1,
+          "unsafe_commits": 6,
+          "tau": 0.838
+        },
+        {
+          "correct_commit_pct": 31.1,
+          "unsafe_commit_pct": 6.7,
+          "block_pct": 62.2,
+          "unsafe_commits": 6,
+          "tau": 0.839
+        },
+        {
+          "correct_commit_pct": 31.1,
+          "unsafe_commit_pct": 5.6,
+          "block_pct": 63.3,
+          "unsafe_commits": 5,
+          "tau": 0.961
+        },
+        {
+          "correct_commit_pct": 28.9,
+          "unsafe_commit_pct": 0.0,
+          "block_pct": 71.1,
+          "unsafe_commits": 0,
+          "tau": 0.982
+        }
+      ]
+    },
+    "coact": {
+      "correct_commit_pct": 22.2,
+      "unsafe_commit_pct": 5.6,
+      "block_pct": 72.2,
+      "unsafe_commits": 5,
+      "description": "Two viewpoints must localise the referent to within 5 cm of the same point before anything moves."
+    },
+    "coact_after_correction": {
+      "correct_commit_pct": 40.0,
+      "unsafe_commit_pct": 5.6,
+      "block_pct": 54.4,
+      "unsafe_commits": 5,
+      "description": "CoAct, then one spoken correction on every block."
+    },
+    "recovery_by_disagreement_type": {
+      "perspective": {
+        "blocks": 37,
+        "recovered": 16,
+        "on_target": 16,
+        "recovered_pct": 43.2,
+        "on_target_pct": 43.2
+      },
+      "no_target": {
+        "blocks": 28,
+        "recovered": 0,
+        "on_target": 0,
+        "recovered_pct": 0.0,
+        "on_target_pct": 0.0
+      }
+    },
+    "by_condition": {
+      "clean": {
+        "trials": 30,
+        "single_agent_unsafe_pct": 30.0,
+        "coact_unsafe_pct": 0.0,
+        "coact_block_pct": 50.0,
+        "both_agents_agreed_and_were_wrong": 0
+      },
+      "depth_skew": {
+        "trials": 30,
+        "single_agent_unsafe_pct": 56.7,
+        "coact_unsafe_pct": 0.0,
+        "coact_block_pct": 93.3,
+        "both_agents_agreed_and_were_wrong": 0
+      },
+      "occluded": {
+        "trials": 30,
+        "single_agent_unsafe_pct": 66.7,
+        "coact_unsafe_pct": 16.7,
+        "coact_block_pct": 73.3,
+        "both_agents_agreed_and_were_wrong": 5
+      }
+    },
+    "ambiguity_detection": {
+      "recall_pct": 82.2,
+      "precision_vs_clean_unambiguous": 1.0,
+      "f1": 0.902
+    },
+    "correction": {
+      "description": "After a block the human names the plate; both agents re-ground.",
+      "attempts": 65,
+      "consensus_restored_pct": 24.6,
+      "restored_on_intended_target_pct": 24.6
+    },
+    "perception": {
+      "mean_detections_per_view": 2.76,
+      "views_missing_a_plate_pct": 23.9
+    }
+  }
+}

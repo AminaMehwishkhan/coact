@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: coact
+    runtime: python
+    plan: free
+    buildCommand: |
+      apt-get update -y && apt-get install -y libegl1 libgl1 libglib2.0-0 || true
+      pip install -r requirements.txt
+    startCommand: uvicorn coact.server:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: MUJOCO_GL
+        value: egl
+      - key: COACT_OV_DEVICE
+        value: AUTO
+      - key: SPEECHMATICS_API_KEY
+        sync: false

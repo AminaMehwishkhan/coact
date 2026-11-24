@@ -1,0 +1,12 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+*.log
+node_modules/
+dist/
+# Generated artefacts are committed on purpose (they are the evidence):
+#   results/benchmark.json, results/agent_views.png, results/coact_demo.mp4
